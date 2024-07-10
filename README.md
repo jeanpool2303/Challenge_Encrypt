@@ -28,3 +28,6 @@ Por ejemplo:
 ## Prototipo web
 
 ![Prototipo web](img/web.png)
+
+
+
