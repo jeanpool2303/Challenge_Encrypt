@@ -1,70 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Encriptador de Texto</title>
-  <link rel="shortcut icon" href="img/roj.jpg" type="image/x-icon" />
-  <link rel="stylesheet" href="styles.css" />
-  <link href="/website/css/uicons-outline-rounded.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
 <body>
-  
   <div class="container">
     <header>
-      <img src="img/alura.jpg" alt="icono alura" class="header-image">
+      <img src="img/logo.svg" alt="Logo de Alura" class="header-image">
+      <h1 class="titulo_Header">Listo para Encriptar</h1>
     </header>
-    <h1 class="titulo_Header">Listo para Encriptar</h1>
-    <div class="encriptar">
-      <textarea name="texto" class="texto" id="texto" cols="30" rows="10" placeholder="Ingresa el texto aquí"></textarea>
-      <div class="terminos">
-        <p>Solo letras minúsculas y sin acentos.</p>
-      </div>
-      <div class="botones">
-        <button class="btn-encriptar" type="button" onclick="encriptar()">
-          <img src="img/carga.gif" class="icono-encriptar" alt="icono de contraseña">
-          Encriptar
-        </button>
-        <input type="button" class="btn-desencriptar" value="Desencriptar" onclick="desencriptar()"/>
-      </div>
-    </div>
-    <div class="encriptado">
-      <img src="img/muñeco.png" alt="" id="muñeco" />
-      <div class="mensaje-encriptado" id="mensaje-encriptado">
-        <h3 id="titulo-mensaje">Ningún mensaje fue encontrado</h3>
-        <p id="parrafo">Ingresa el texto que deseas encriptar o desencriptar</p>
-        <textarea id="resultado" readonly></textarea>
-        <button id="btn-copiar" onclick="copiarTexto()">Copiar</button>
-      </div>
-    </div>
+    
+    <main>
+      <section class="encriptar">
+        <textarea id="texto" placeholder="Ingresa el texto aquí"></textarea>
+        <div class="terminos">
+          <p>Solo letras minúsculas y sin acentos.</p>
+        </div>
+        <div class="botones">
+          <button id="btn-encriptar">Encriptar</button>
+          <button id="btn-desencriptar">Desencriptar</button>
+        </div>
+      </section>
+
+      <section class="encriptado">
+        <img src="img/muñeco.png" alt="Imagen representativa" id="muñeco">
+        <div id="mensaje-encriptado">
+          <h2 id="titulo-mensaje">Ningún mensaje fue encontrado</h2>
+          <p id="parrafo">Ingresa el texto que deseas encriptar o desencriptar</p>
+          <textarea id="resultado" readonly></textarea>
+          <button id="btn-copiar">Copiar</button>
+        </div>
+      </section>
+    </main>
   </div>
 
-  <footer class="pc">
-    <a href="https://github.com/jeanpool2303" class="github">
-      <ion-icon class="fa fa-github fa-3x" aria-hidden="true" name="logo-github"></ion-icon>
-    </a>
-    <a href="https://codepen.io/Jean-Pool-Albert-PALOMINO-VICENTE" class="codepen">
-      <ion-icon class="fa fa-github fa-3x" aria-hidden="true" name="logo-codepen"></ion-icon>
-    </a>
-    <div class="copyright">
-      <p> Made by <a href="https://www.linkedin.com/in/jean-pool-albert-palomino-vicente-108436193/" target="_blank"><span>&nbsp;Jean Palomino&nbsp;</span></a></p>
-    </div>
-  </footer>
-  <footer class="mobile">
-    <a href="https://github.com/jeanpool2303" class="github">
-      <ion-icon class="fa fa-github fa-3x" aria-hidden="true" name="logo-github"></ion-icon>
-    </a>
-    <a href="https://codepen.io/Jean-Pool-Albert-PALOMINO-VICENTE" class="codepen">
-      <ion-icon class="fa fa-github fa-3x" aria-hidden="true" name="logo-codepen"></ion-icon>
-    </a>
-    <div class="copyright">
-      <p> Made by <span>&nbsp;Jean Palomino&nbsp;</span></p>
+  <footer>
+    <div class="footer-content">
+      <a href="https://github.com/jeanpool2303" class="github" target="_blank">
+        <ion-icon name="logo-github"></ion-icon>
+      </a>
+      <a href="https://codepen.io/Jean-Pool-Albert-PALOMINO-VICENTE" class="codepen" target="_blank">
+        <ion-icon name="logo-codepen"></ion-icon>
+      </a>
+      <p>Made by <a href="https://www.linkedin.com/in/jean-pool-albert-palomino-vicente-108436193/" target="_blank"><span>Jean Palomino</span></a></p>
     </div>
   </footer>
 
-  
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
   <script src="app.js"></script>
